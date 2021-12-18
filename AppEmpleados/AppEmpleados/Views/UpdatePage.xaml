@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:Examen_3.ViewModels"
+             x:Class="AppEmpleados.Views.UpdatePage">
+    <ContentPage.BindingContext>
+        <vm:BaseViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+
+            <Entry x:Name="codigo" Text="{Binding Codigo, Mode=TwoWay}" IsVisible="false" />
+
+            <Entry x:Name="nombre" Text="{Binding Nombre, Mode=TwoWay}" Placeholder="Nombre" />
+
+            <Entry x:Name="apellidos" Text="{Binding Apellidos, Mode=TwoWay}" Placeholder="Apellido" />
+
+            <Entry x:Name="edad" Text="{Binding Edad, Mode=TwoWay}" Placeholder="Edad" />
+
+            <Entry x:Name="direccion" Text="{Binding Direccion, Mode=TwoWay}" Placeholder="Direccion" />
+
+            <Entry x:Name="puesto" Text="{Binding Puesto, Mode=TwoWay}" Placeholder="Puesto" />
+
+
+            <Button x:Name="btnactualizar" Text="Actualizar" Clicked="btnactualizar_Clicked" BackgroundColor   ="Green"/>
+
+            <Button  x:Name="btneliminar" Text="Eliminar" Clicked="btneliminar_Clicked" BackgroundColor   ="Blue"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

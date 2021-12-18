@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:Examen_3.ViewModels"
+             x:Class="AppEmpleados.Views.AgregarEmpleado">
+    <ContentPage.BindingContext>
+        <vm:BaseViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="30,45,30,30">
+            <Entry x:Name="idpago" Text="{Binding Codigo, Mode=TwoWay}" IsVisible="false" />
+
+            <Entry x:Name="Nombre" Text="{Binding Nombre, Mode=TwoWay}" Placeholder="Nombre" />
+            <Entry x:Name="Apellidos" Text="{Binding Apellidos, Mode=TwoWay}" Placeholder="Apellidos" />
+            <Entry x:Name="Edad" Text="{Binding Edad, Mode=TwoWay}" Placeholder="Edad" />
+            <Entry x:Name="Direccion" Text="{Binding Direccion, Mode=TwoWay}" Placeholder="Direccion" />
+            <Entry x:Name="Puesto" Text="{Binding Puesto, Mode=TwoWay}" Placeholder="Puesto" />
+            <Button Text="Guardar" Command="{Binding cmdAddTask}"/>
+
+
+            <Button x:Name="btnlista" Text="Empleados Guardados" Clicked="btnlista_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
